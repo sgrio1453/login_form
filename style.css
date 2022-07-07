@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  display: grid;
+  height: 100vh;
+  place-items: center;
+  background: linear-gradient(to right, #dfabc5 0%, #1da1f2 100%);
+}
+.container {
+  background-color: white;
+  max-width: 350px;
+  width: 100%;
+  padding: 25px 30px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.container .logo img {
+  width: 90px;
+  height: 90px;
+  position: absolute;
+  left: 70%;
+  top: 5px;
+  border-radius: 50%;
+  border: 5px solid red;
+}
+
+.container form .title {
+  font-size: 30px;
+  font-weight: bold;
+  margin: 20px 0 10px 0;
+}
+.container form .title::before {
+  content: "";
+  position: absolute;
+  height: 4px;
+  width: 33;
+  bottom: 2px;
+  left: 0;
+  border-radius: 5px;
+  background: red;
+}
+
+.container form .input-box {
+  width: 100%;
+  height: 45px;
+  margin-top: 25px;
+  position: relative;
+}
+
+.container form .input-box input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  font-size: 16px;
+  outline: none;
+}
+
+.container form .underline::before {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 100%;
+  background-color: #ccc;
+  left: 0;
+  bottom: 0;
+}
+.container form .underline::after {
+  position: absolute;
+  content: "";
+  height: 2px;
+  width: 100%;
+  background-color: red;
+  left: 0;
+  bottom: 0;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: all 0.3 ease;
+}
+
+.container form .input-box input:focus ~ .underline::after,
+.container form .input-box input:valid ~ .underline::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.container form .button {
+  margin: 40px 0 20px 0;
+}
+
+.container form .input-box input[type="submit"] {
+  font-size: 17px;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: darkcyan;
+  transition: all 0.3s ease;
+}
+
+.container form .input-box input[type="submit"]:hover {
+  letter-spacing: 1px;
+  background-color: rgba(0, 0, 0, 0.15);
+  color: red;
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+.container .text {
+  font-size: 14px;
+  text-align: center;
+}
+
+.container .google a,
+.container .github a,
+.container .twitter a,
+.container .facebook a {
+  display: block;
+  width: 100%;
+  height: 45px;
+  font-size: 15px;
+  text-decoration: none;
+  padding-left: 20px;
+  color: #fff;
+  line-height: 45px;
+  border-radius: 5px;
+}
+
+.container .google a {
+  background-color: #fa0b0b;
+  margin: 20px 0 15px 0;
+}
+.container .google a:hover {
+  background-color: #f33737;
+}
+
+.container .github a {
+  background-color: #24292e;
+  margin: 20px 0 15px 0;
+}
+
+.container .github a:hover {
+  background-color: #4a4c52;
+}
+.container .twitter a {
+  background-color: #1da1f2;
+  margin: 20px 0 15px 0;
+}
+.container .twitter a:hover {
+  background-color: #3cadf3;
+}
+
+.container .facebook a {
+  background-color: #3b5998;
+  margin: 20px 0 15px 0;
+}
+.container .facebook a:hover {
+  background-color: #4e6699;
+}
+
+.container .google i,
+.container .github i,
+.container .twitter i,
+.container .facebook i {
+  font-size: 22px;
+  padding-right: 22px;
+}
